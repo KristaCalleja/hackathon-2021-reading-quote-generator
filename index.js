@@ -37,7 +37,7 @@ quotes = [
     // columnDiv.appendChild(toggleDiv);
     // newTrack.appendChild(columnDiv);
     // main.appendChild(newTrack);
-    // daysDiv.innerText = "Day 1";
+    // daysDiv.innerText = "Book 1";
 
     // Nested function: toggle DONE on btn
 //     toggleDiv.onclick = function(){
