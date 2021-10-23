@@ -16,7 +16,7 @@
             <form id="form" action="#">
                 <div class="input-aria-live sr-only" aria-live="polite"></div>
                 <input type="number" id="books" min="1" max="4">
-                <button id="primary-btn" type="submit">Commit</button>
+                <button id="commit" type="submit">Commit</button>
             </form>
             <p>Choose a number between 1 and 4.</p>
         </div>
@@ -25,12 +25,16 @@
         </div>
         <div class="modal-outer">
             <div class="modal-inner">
-                <div class="flower"></div>
-                <h2 id="congratulatory"></h2> and remember, <h3 id="quotes"></h3>
+                <div class="text">
+                    <h2 id="congratulatory"></h2> and remember,
+                    <h3 id="quotes"></h3>
+                </div>
+                <img id="close" src="images/close-outline.svg" alt="close modal">
             </div>
         </div>
+        <button id="reset">Reset commitment</button>
     </main>
-    <footer>Designed and coded in JS by <a href="https://kristacalleja.github.io/">Krista Calleja</a>.</footer>
+    <footer>Designed and coded in Vanilla JS by <a href="https://kristacalleja.github.io/">Krista Calleja</a>.</footer>
     <script src="index.js"></script>
 </body>
 

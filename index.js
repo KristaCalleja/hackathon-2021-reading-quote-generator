@@ -12,14 +12,16 @@ quotes = [
     "You are never alone when lost in the magic of a book. (Mary Lu)",
     "Persistence can change failure into an extraordinary achievement. (Marv Levy)",
 ]
-const commitBtn = document.getElementById('primary-btn');
+const commitBtn = document.getElementById('commit');
 const commitCard = document.querySelector('.card');
 const boardCard = document.querySelector('.board');
 const userInput = document.getElementById('books');
 const modalOuter = document.querySelector('.modal-outer');
 const modalInner = document.querySelector('.modal-inner');
+const closeModal = document.getElementById('close');
 const congratulatoryRemarks = document.getElementById('congratulatory');
 const quotation = document.getElementById('quotes');
+const resetBtn = document.getElementById('reset');
 // Move from intro card to the tracking board
 function startTracking(){
     commitCard.classList.toggle('card-inactive');
@@ -62,19 +64,27 @@ function createTracks(){
         quotation.innerHTML = `${quotationRemarks}`;
         // Show the modal
         modalOuter.classList.add('open');
+        function closeModal(){
+            modalOuter.classList.remove('open');
+        }
         modalOuter.addEventListener('click', function(event){
-            console.log(event);
-        })
-    }
+            const isOutside = event.target.closest('.modal-inner');
+            if (isOutside || closeModal.onclick){
+                    closeModal();
+                }
+            })
+            window.addEventListener('keydown', event => {
+                 if(event.key === 'Escape'){
+                    closeModal();
+                }
+            });
+        };
 }
 commitBtn.addEventListener('click', function(event){
     event.preventDefault();
     startTracking();
     numberOfBooksToRead();
 });
-// Upon loading the Tracking Board all tracks must be pre-loaded
-    // Days with Toggles in OFF setting
-// Once the toggle is tapped as DONE
-    // The book is closed and changed to green
-    // The modal is generated once
-    // Populate the modal with remarks and quotes
+resetBtn.addEventListener('click', function(){
+    window.location.reload(true);
+});
