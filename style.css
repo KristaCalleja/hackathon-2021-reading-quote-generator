@@ -2,6 +2,9 @@
 :root{
     --roman-silver: #8B92A2;
     --rich-black: #02020A;
+    --roman-silver-gradient: #F4F4F6;
+    --rose: #ce646a;
+    --bellus: #09364b;
     font-size: 20px;
     font-weight: 600;
 }
@@ -11,6 +14,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Crimson Text', serif;
+    color: var(--rich-black);
     box-sizing: inherit;
 }
 html{
@@ -25,23 +29,25 @@ main{
     justify-content: center;
     align-items: center;
     background-image: url(images/annie-spratt-kXqTlz4Ejhw-unsplash.jpg);
+    background-blend-mode: overlay;
+    background-color: var(--roman-silver);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 .card{
     min-height: 270px;
-    max-width: 300px;
+    max-width: 260px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1em 1.8em;
-    background: #EFEFEE;
-    opacity: .5;
+    background: var(--roman-silver-gradient);
+    opacity: .8;
     border-radius: 50%;
     text-align: center;
 }
-.card-close{
+.card-inactive{
     display: none;
 }
 a{
@@ -53,6 +59,67 @@ a{
 .board{
     display: none;
 }
-.board-open{
-    display: inline-block;
+.board-active{
+    display: inline;
+    min-height: 270px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em 1.8em;
+    background: #EFEFEE;
+    opacity: .8;
+    border-radius: 11px;
+    text-align: center;
+}
+.track{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.toggle{
+    height: 30px;
+    filter: invert(25%) sepia(88%) saturate(6550%) hue-rotate(349deg) brightness(97%) contrast(91%);
+}
+.read{
+    filter: invert(13%) sepia(100%) saturate(4947%) hue-rotate(142deg) brightness(105%) contrast(76%);
+}
+.modal-outer{
+    display: grid;
+    background: hsla(223, 15%, 91%, 0.7);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Hide modal until needed */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 3s;
+}
+.modal-outer.open{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-inner{
+    max-width: 600px;
+    min-width: 400px;
+    min-height: 200px;
+    padding: 2em;
+    border-radius: 5px;
+    border: 2px var(--rich-black) solid;
+    background: var(--roman-silver-gradient);
+    text-align: center;
+}
+.modal-inner h2{
+    color: var(--rose);
+    font-weight: 600;
+}
+.modal-inner h3{
+    font-style: italic;
+    font-size: .95rem;
+    color: var(--bellus);
 }
