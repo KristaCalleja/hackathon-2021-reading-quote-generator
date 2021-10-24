@@ -17,6 +17,8 @@ const commitCard = document.querySelector('.card');
 const boardCard = document.querySelector('.board');
 const userInput = document.getElementById('books');
 const modalOuter = document.querySelector('.modal-outer');
+const retakeOuterModal = document.querySelector('.modal-outer-retake');
+const retakeInnerModal = document.querySelector('.modal-inner-retake');
 const modalInner = document.querySelector('.modal-inner');
 const closeModal = document.getElementById('close');
 const congratulatoryRemarks = document.getElementById('congratulatory');
@@ -30,6 +32,10 @@ function startTracking(){
 function numberOfBooksToRead(){
     console.log(userInput.value);
     let timesToCreateTracks = userInput.value;
+    // if (userInput.value > 4){
+    //     // Show the modal
+    //     retakeOuterModal.classList.add('open');
+    // } 
     while (timesToCreateTracks > 0){
         createTracks();
         timesToCreateTracks--;

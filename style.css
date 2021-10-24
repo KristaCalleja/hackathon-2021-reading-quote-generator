@@ -143,7 +143,7 @@ input[type=number]{
     -webkit-filter: invert(13%) sepia(100%) saturate(4947%) hue-rotate(142deg) brightness(105%) contrast(76%);
             filter: invert(13%) sepia(100%) saturate(4947%) hue-rotate(142deg) brightness(105%) contrast(76%);
 }
-.modal-outer{
+.modal-outer, .modal-outer-retake{
     display: -ms-grid;
     display: grid;
     background: hsla(223, 15%, 91%, 0.7);
@@ -164,12 +164,13 @@ input[type=number]{
     /* Hide modal until needed */
     opacity: 0;
     pointer-events: none;
+    transition: opacity 1.2s;
 }
 .modal-outer.open{
     opacity: 1;
     pointer-events: all;
 }
-.modal-inner{
+.modal-inner, .modal-inner-retake{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
