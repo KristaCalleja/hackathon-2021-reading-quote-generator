@@ -1,12 +1,11 @@
-# GreatReader - Krista Calleja's solution for the SheSharp and Troopl Hackathon Oct 2021
+# GreatReader - Solution submitted for the SheSharp and Troopl Hackathon Oct 2021
 
-In October 2021 I attended my first hackathon, organised by [SheSharp](https://www.shesharp.co/) and [Troopl](https://troopl.com/). Together with tens of other coders from around the globe we met up online through Slack, Google Meets and via YouTube live videos to discuss the challenge, and our coding experiences.  
+In October 2021 I attended my first hackathon, organised by [SheSharp](https://www.shesharp.co/) and [Troopl](https://troopl.com/). Together with tens of other coders from around the globe we met up online through Slack, Google Meets and YouTube live videos to discuss the challenge, and our coding experiences.  
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -21,21 +20,10 @@ In October 2021 I attended my first hackathon, organised by [SheSharp](https://w
 
 ### The challenge
 
-The Guidelines of the Hackathon required 
-A successful project should were as follows:
-
+The Guidelines of the Hackathon stated as follows:
+A successful project should:
 - Generate supportive and/or inspirational messages (e.g. "You've got this!" or "All our dreams can come true, if we have the courage to pursue them.") Please note that all messages should follow our Hackathon Code of Conduct.
 - Display messages either on-demand (e.g. via button click, Twitter reply) or at timed intervals (e.g. daily reminder bot)
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
 ### Links
 
@@ -44,6 +32,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Greatreader JavaScript Code: [Github repository](https://github.com/KristaCalleja/hackathon-2021-reading-quote-generator/blob/master/index.js)
 
 ## My process
+
+I wanted my web app to display the messages following the termination of a user action, so I came up with the idea of the user setting 'a commitment'. I then settled for a commitment to a reading goal (similar to what is found on Goodreads website (hence the name GreatReader, lol!)). The GreatReader app cheers for you as you go through the month reading up to your reading commitment. 
+
+At first I was confused as to whether I had to have multiple HTML pages with links between them, or if I should use divs which are in/visible according to the user actions. Ultimately, I chose the latter otherwise it would have overloaded the site with a lot of repeated HTML code. I am not yet fluent in React but my heart tells me that this app would have worked in a jiffy with React.js.
+
+As usual, I get carried away designing and positioning my elements. The rose background theme came to me as I stumbled upon [Annie Spratt's](https://unsplash.com/@anniespratt) evocative photo collection on Unsplash. I knew I wanted to see a lot of these pictures so I tried to work around using them and her palette of colours. I think it paired well with the idea of supportive/inspirational messages, kind of, showing self-care, being considerate, taking time for oneself.
+
+I also decided to add a landing page, because, although definitely not necessary for this project, I have been working so many months on my front-end CSS skills, I might as well showcase them, and that is mainly because I just find it to be F.U.N.
 
 ### Built with
 
@@ -55,17 +51,24 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+First and foremost, I learned how much I can get done when I have a deadline hanging over my head. :grinning smile:
 
-To see how you can add code snippets, see below:
+Jokes apart. My main achievement was putting together all the JS knowledge I've been working on since mid-2021 when I decided I had to take this seriously. DOM manipulation, event handling, arrays, loops, iterations, image sourcing, JS methods and modals. That all happens in just 2 clicks and less than 100 lines of JS code. I also threw in some HTML5 elements, some accessibility, a couple of pseudo-elements and a touch of animations CSS. What fun! 
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+The main learning point for me was figuring out the loop for creating the 'book reading tracks'. Tristan Vinay and Michael Siega mentored me in the right direction, and I'm happy to finally have the following (mind blowing) code to carry out the action I wanted: 
+
+```js
+while (timesToCreateTracks > 0){
+  createTracks();
+  timesToCreateTracks--;
+}
 ```
+
+Another thing I learned, although I kind of knew it already: these kind of projects never end, that is, I can keep adding more and more features until Hackathon 2022. And that brings me to the next section.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I could have added more features to this app, such as, addressing the case if user inputs more than 4 books in his commitment. Another modal could be created, but I was hesitant to create more HTML and CSS. Ultimately, I want to perfect my JS skills so that I can take it to another level, such as 'React', since I know that is in high demand at the moment. 
 
 ### Useful resources
 
@@ -77,4 +80,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-A big thank you to Michael Siega, Tristan Vinay, Alex Siega and all the other members of SheSharp and Troopl who organised this fun and didactic activity. It was a pleasure!
+A big thank you to Alex Siega and all the other very kind members of SheSharp and Troopl who organised this fun and didactic activity. It was a pleasure! You are an inspiration. Thank you for making us feel part of the community.
