@@ -27,7 +27,7 @@ A successful project should:
 
 ### Links
 
-- Landing page URL: [Greatreader Landing Page](https://kristacalleja.io/hackathon-2021-web-app-landing-page)
+- Landing page URL: [Greatreader Landing Page](https://kristacalleja.github.io/hackathon-2021-web-app-landing-page)
 - Web app live site URL: [Greatreader live site](https://kristacalleja.github.io/hackathon-2021-reading-quote-generator/)
 - Greatreader JavaScript Code: [Github repository](https://github.com/KristaCalleja/hackathon-2021-reading-quote-generator/blob/master/index.js)
 
